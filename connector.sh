@@ -1,6 +1,26 @@
 #! /bin/bash
 
 
+# this is the Confluent Cloud API Key and Secret
+export ccloud_key="$CONFLUENT_CLOUD_API_KEY"
+export ccloud_secret="$CONFLUENT_CLOUD_API_SECRET"
+
+
+# This is the Confluent Cloud environment" 
+export env_id="env-m8pnj2"
+# This is the Confluent Cluster ID
+export kafka_cluster_id="lkc-prvpdy"
+
+# This is the service Account id that runs the connector"
+export serviceAccount="sa-9po6r5"
+
+# SQL Server information 
+export PodName=pod1
+export SQLServerHost="dbserver.us-east-1.elb.amazonaws.com"
+export SQLServerPassword="password"
+export SQLServerUser="sa"
+export SQLDBName="demo"
+
 
 #auth_key=`echo -n "$ccloud_key:$ccloud_secret" | base64`
 #auth_key="$ccloud_key:$ccloud_secret"
