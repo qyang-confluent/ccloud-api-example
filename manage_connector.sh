@@ -1,20 +1,26 @@
 #! /bin/bash
 
+#################################################
+# Environemnt Variable for Confluent Cloud
 # this is the Confluent Cloud API Key and Secret
-export ccloud_key="$CONFLUENT_CLOUD_API_KEY"
-export ccloud_secret="$CONFLUENT_CLOUD_API_SECRET"
+ccloud_key="$CONFLUENT_CLOUD_API_KEY"
+ccloud_secret="$CONFLUENT_CLOUD_API_SECRET"
+
+# This is the Confluent Cloud environment"
+env_id="$CONFLUENT_CLOUD_ENV_ID"
+
+# This is the Confluent Cluster ID
+kafka_cluster_ia="$CONFLUENT_CLOUD_KAFKA_CLUSTER_ID"
+
+# This is the service Account id that runs the connector"
+serviceAccount="$CONFLUENT_CLOUD_SERVICE_ACCOUNT"
+#################################################
 
 
 operation="pause"
 #operation="resume"
 
-# This is the Confluent Cloud environment" 
-export env_id="env-m8pnj2"
-# This is the Confluent Cluster ID
-export kafka_cluster_id="lkc-prvpdy"
 
-# This is the service Account id that runs the connector"
-export serviceAccount="sa-9po6r5"
 
 # SQL Server information 
 #export PodName=pod1

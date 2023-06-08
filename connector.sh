@@ -1,25 +1,27 @@
 #! /bin/bash
 
-
+#################################################
+# Environemnt Variable for Confluent Cloud
 # this is the Confluent Cloud API Key and Secret
-export ccloud_key="$CONFLUENT_CLOUD_API_KEY"
-export ccloud_secret="$CONFLUENT_CLOUD_API_SECRET"
-
+ccloud_key="$CONFLUENT_CLOUD_API_KEY"
+ccloud_secret="$CONFLUENT_CLOUD_API_SECRET"
 
 # This is the Confluent Cloud environment" 
-export env_id="env-m8pnj2"
+env_id="$CONFLUENT_CLOUD_ENV_ID"
+
 # This is the Confluent Cluster ID
-export kafka_cluster_id="lkc-prvpdy"
+kafka_cluster_ia="$CONFLUENT_CLOUD_KAFKA_CLUSTER_ID"
 
 # This is the service Account id that runs the connector"
-export serviceAccount="sa-9po6r5"
+serviceAccount="$CONFLUENT_CLOUD_SERVICE_ACCOUNT"
+#################################################
 
 # SQL Server information 
-export PodName=pod1
-export SQLServerHost="dbserver.us-east-1.elb.amazonaws.com"
-export SQLServerPassword="password"
-export SQLServerUser="sa"
-export SQLDBName="demo"
+#export PodName=pod1
+#jexport SQLServerHost="dbserver.us-east-1.elb.amazonaws.com"
+#export SQLServerPassword="password"
+#export SQLServerUser="sa"
+#export SQLDBName="demo"
 
 
 #auth_key=`echo -n "$ccloud_key:$ccloud_secret" | base64`
@@ -45,7 +47,6 @@ curl --request POST \
         "database.server.name": "asc.cdc.public",
         "database.instance": "MSSQLSERVER",
         "database.applicationIntent": "ReadOnly",
-        "snapshot.isolation.mode": "repeatable_read",
         "snapshot.mode": "initial",
         "tombstones.on.delete": "true",
         "poll.interval.ms": "1000",
