@@ -1,9 +1,9 @@
 # Shell Script example how to manage Confluent Cloud using REST API
 ## Reference: 
- - Confluent Cloud REST API Document[https://docs.confluent.io/cloud/current/api.html]
+ - [https://docs.confluent.io/cloud/current/api.html]Confluent Cloud REST API Document
 
 ## Required Information
-  - Confluent Cloud API Key/Secret[https://docs.confluent.io/cloud/current/access-management/authenticate/api-keys/api-keys.html#cloud-cloud-api-keys]
+  - [https://docs.confluent.io/cloud/current/access-management/authenticate/api-keys/api-keys.html#cloud-cloud-api-keys]Confluent Cloud API Key/Secret
 
 ## Connector Management
 
